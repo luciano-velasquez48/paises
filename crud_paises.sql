@@ -29,3 +29,13 @@ FROM paises AS p
 LEFT JOIN provincias AS pr
     ON p.pais_id = pr.pais_id
 ORDER BY p.pais_id, pr.pro_id;
+-- MASTER-DETAIL: países y provincias
+SELECT
+    p.pais_id,
+    p.pais_descripcion,
+    pr.pro_id,
+    pr.pro_descripcion
+FROM paises AS p
+LEFT JOIN provincias AS pr
+    ON p.pais_id = pr.pais_id
+ORDER BY p.pais_id, pr.pro_id;
